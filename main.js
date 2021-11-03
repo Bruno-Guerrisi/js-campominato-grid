@@ -33,18 +33,26 @@ buttPlay.addEventListener('click', function (){
 
     for (let i = 1; i <= size; i++) {
 
-        const square = document.createElement('div');
-        square.classList.add('square');
-        square.style.width =`calc(100% / ${numberCell})`
-        square.style.height =`calc(100% / ${numberCell})`
+        const square = genSquare(numberCell);
+
         square.innerHTML = (i);
 
         containerBox.append(square);
-
 
         square.addEventListener('click', () => square.classList.toggle('click'));
     }
 
 });
+
+
+function genSquare(numCell) {
+
+    const node = document.createElement('div');
+    node.classList.add('square');
+    node.style.width =`calc(100% / ${numCell})`
+    node.style.height =`calc(100% / ${numCell})`
+
+    return node;
+}
 
 
