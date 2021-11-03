@@ -21,6 +21,13 @@ header .logo-section{
     align-items: center;
 }
 
+#difficult{
+    width: 150px;
+}
+#playGame{
+    width: 50px;
+}
+
 main {
     height: 100%;
     background-color: #7fffd4;
@@ -49,9 +56,11 @@ footer{
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .square.click{
     background-color: #6495ed;
     color: white;
+    cursor: default;
 }

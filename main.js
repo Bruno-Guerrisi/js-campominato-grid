@@ -31,26 +31,28 @@ buttPlay.addEventListener('click', function (){
             numberCell = 7;
     }
 
+
     for (let i = 1; i <= size; i++) {
 
-        const square = genSquare(numberCell);
-
-        square.innerHTML = (i);
-
+        /* generate square */
+        const square = genSquare(numberCell, i);
         containerBox.append(square);
-
-        square.addEventListener('click', () => square.classList.toggle('click'));
+        
+        /* square click */
+        square.addEventListener('click', () => square.classList.add('click'));
     }
-
 });
 
 
-function genSquare(numCell) {
+/* function to generate square */
+function genSquare(numCell, num) {
 
     const node = document.createElement('div');
     node.classList.add('square');
     node.style.width =`calc(100% / ${numCell})`
     node.style.height =`calc(100% / ${numCell})`
+
+    node.innerHTML = (num);
 
     return node;
 }
